@@ -7,7 +7,7 @@ public class PrincipalArray {
     public static void main(String[] args) {
         System.out.println("Minhas Tarefas");
         System.out.println("-----------------------");
-        ArrayTarefas tarefas = new ArrayTarefas(3);
+        ListaTarefas tarefas = new ListaTarefas();
         Tarefa tarefa1 = new Tarefa("Estudar Java");
         Tarefa tarefa2 = new Tarefa("Trabalhar");
         Tarefa tarefa3 = new Tarefa("Estudar para o Codenation");
