@@ -28,6 +28,24 @@ public class ListaTarefas {
         }
     }
 
+    public void remover(Tarefa tarefa){
+        this.taferas.remove(tarefa);
+    }
+
+    /* == Criando tarefa de busca:
+
+    public Tarefa buscar(String descricao){
+        for (Tarefa tarefa: tarefas){
+            if(descricao.equals(tarefa.descricao)){
+                return tarefa;
+            }
+        }
+        System.out.println("Tarefa não encontrada");
+        return null;
+    }
+
+     */
+
     public void exibirTarefas(){
         for (Tarefa tarefa: taferas){
             tarefa.exibirTarefa();

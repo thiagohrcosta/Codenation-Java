@@ -18,10 +18,11 @@ public class PrincipalArray {
         tarefas.adicionar(tarefa1);
         tarefas.adicionar(tarefa2);
         tarefas.adicionar(tarefa3);
+        tarefas.adicionar(tarefa4);
 
         tarefas.exibirTarefas();
 
-        tarefas.remover(4);
+        tarefas.remover(tarefa4);
 
         System.out.println("Minhas tarefas após remover:");
         System.out.println("-----------------------");
