@@ -12,7 +12,12 @@ public class CadastroJogador {
     private Integer nivelHabilidade;
     private BigDecimal salario;
 
-    public CadastroJogador(long id, long idTime, String nome, LocalDate dataNascimento, Integer nivelHabilidade, BigDecimal salario) {
+    public CadastroJogador(long id,
+                           long idTime,
+                           String nome,
+                           LocalDate dataNascimento,
+                           Integer nivelHabilidade,
+                           BigDecimal salario) {
         this.id = id;
         this.idTime = idTime;
         this.nome = nome;

@@ -1,7 +1,6 @@
 package br.com.codenation;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class CadastroTime {
 
@@ -10,17 +9,17 @@ public class CadastroTime {
     private LocalDate dataCriaçao;
     private String corUniformePrincipal;
     private String corUniformeSecundario;
-    private List<Jogador> jogadores;
 
-
-    public CadastroTime(long id, String nome, LocalDate dataCriacao, String corUniformePrincipal, String corUniformeSecundario){
+    public CadastroTime(long id,
+                        String nome,
+                        LocalDate dataCriaçao,
+                        String corUniformePrincipal,
+                        String corUniformeSecundario) {
         this.id = id;
         this.nome = nome;
-        this.LocalDate = dataCriacao;
-        this.String = corUniformePrincipal;
-        this.String = corUniformeSecundario;
-        jogadores = new ArrayList<>();
-
+        this.dataCriaçao = dataCriaçao;
+        this.corUniformePrincipal = corUniformePrincipal;
+        this.corUniformeSecundario = corUniformeSecundario;
     }
 
     public long getId(){
@@ -61,10 +60,6 @@ public class CadastroTime {
 
     public void setCorUniformeSecundario(String corUniformeSecundario){
         this.corUniformeSecundario = corUniformeSecundario;
-    }
-
-    public List<Jogador> getJogadores() {
-        return jogadores;
     }
 }
 

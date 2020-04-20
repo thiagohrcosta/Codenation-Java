@@ -2,6 +2,7 @@ package br.com.codenation;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.codenation.desafio.annotation.Desafio;
@@ -9,14 +10,43 @@ import br.com.codenation.desafio.app.MeuTimeInterface;
 
 public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
+	private CadastroTime equipe;
+	private CadastroJogador jogador;
+
+	private List<CadastroTime> listarEquipes = new ArrayList<CadastroTime>();
+	private List<CadastroJogador>listarJogadores = new ArrayList<>();
+
+
 	@Desafio("incluirTime")
-	public void incluirTime(Long id, String nome, LocalDate dataCriacao, String corUniformePrincipal, String corUniformeSecundario) {
-		throw new UnsupportedOperationException();
+	public void incluirTime(Long id,
+							String nome,
+							LocalDate dataCriacao,
+							String corUniformePrincipal,
+							String corUniformeSecundario)
+	{
+
+		if(existeEquipe(id)) throw new br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException();
+
+		else {
+			equipe = new CadastroTime (id, nome, dataCriacao, corUniformePrincipal, corUniformeSecundario);
+			listarEquipes.add(equipe);
+		}
 	}
 
 	@Desafio("incluirJogador")
-	public void incluirJogador(Long id, Long idTime, String nome, LocalDate dataNascimento, Integer nivelHabilidade, BigDecimal salario) {
-		throw new UnsupportedOperationException();
+	public void incluirJogador(Long id,
+							   Long idTime,
+							   String nome,
+							   LocalDate dataNascimento,
+							   Integer nivelHabilidade,
+							   BigDecimal salario)
+	{
+
+		if(existeJogador(id)) throw new br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException();
+
+		else{
+			jogador = new CadastroJogador(id, idTime, nome, dataNascimento, nivelHabilidade, salario);
+		}
 	}
 
 	@Desafio("definirCapitao")
@@ -77,6 +107,20 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 	@Desafio("buscarCorCamisaTimeDeFora")
 	public String buscarCorCamisaTimeDeFora(Long timeDaCasa, Long timeDeFora) {
 		throw new UnsupportedOperationException();
+	}
+
+	private boolean existeEquipe(long id){
+		for (CadastroTime team: listarEquipes){
+			if (team.getId() == id) return true;
+		}
+		return  false;
+	}
+
+	private boolean existeJogador(long id){
+		for (CadastroJogador player: listarJogadores){
+			if (player.getId() == id) return true;
+		}
+		return  false;
 	}
 
 }
