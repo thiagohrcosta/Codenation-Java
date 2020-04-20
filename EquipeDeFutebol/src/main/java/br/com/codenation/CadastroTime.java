@@ -51,11 +51,21 @@ public class CadastroTime {
         return corUniformePrincipal;
     }
 
+    public void setCorUniformePrincipal(String corUniformePrincipal){
+        this.corUniformePrincipal = corUniformePrincipal;
+    }
+
     public String getCorUniformeSecundario(){
         return corUniformeSecundario;
     }
 
+    public void setCorUniformeSecundario(String corUniformeSecundario){
+        this.corUniformeSecundario = corUniformeSecundario;
+    }
 
+    public List<Jogador> getJogadores() {
+        return jogadores;
+    }
 }
 
 
