@@ -4,9 +4,12 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import br.com.codenation.desafio.annotation.Desafio;
 import br.com.codenation.desafio.app.MeuTimeInterface;
+
+import static java.util.stream.Collectors.toList;
 
 public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
@@ -28,7 +31,13 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 		if(existeEquipe(id)) throw new br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException();
 
 		else {
-			equipe = new CadastroTime (id, nome, dataCriacao, corUniformePrincipal, corUniformeSecundario);
+			equipe = new CadastroTime (
+					id,
+					nome,
+					dataCriacao,
+					corUniformePrincipal,
+					corUniformeSecundario);
+
 			listarEquipes.add(equipe);
 		}
 	}
@@ -43,30 +52,86 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 	{
 
 		if(existeJogador(id)) throw new br.com.codenation.desafio.exceptions.IdentificadorUtilizadoException();
+		if(!existeEquipe(id)) throw new br.com.codenation.desafio.exceptions.TimeNaoEncontradoException();
 
 		else{
-			jogador = new CadastroJogador(id, idTime, nome, dataNascimento, nivelHabilidade, salario);
+			jogador = new CadastroJogador(
+					id,
+					idTime,
+					nome,
+					dataNascimento,
+					nivelHabilidade,
+					salario);
+
+			listarJogadores.add(jogador);
 		}
 	}
 
 	@Desafio("definirCapitao")
 	public void definirCapitao(Long idJogador) {
-		throw new UnsupportedOperationException();
+
+		if(!existeJogador(idJogador)) {
+			throw new br.com.codenation.desafio.exceptions.JogadorNaoEncontradoException();
+		}
+		else {
+			for (CadastroJogador player : listarJogadores){
+				if(player.getId() == idJogador){
+					player.setCapitao(true);
+				}
+			}
+		}
 	}
 
 	@Desafio("buscarCapitaoDoTime")
 	public Long buscarCapitaoDoTime(Long idTime) {
-		throw new UnsupportedOperationException();
+
+		List<CadastroJogador> allPlayers;
+		Long capitao;
+
+		if(!existeEquipe(idTime)) {
+			throw new br.com.codenation.desafio.exceptions.TimeNaoEncontradoException();
+		}
+		else {
+			allPlayers = findPLayer(idTime);
+			for (CadastroJogador captain : allPlayers){
+				if(captain.isCapitao() == true)
+					return capitao = captain.getId();
+			}
+			throw new br.com.codenation.desafio.exceptions.CapitaoNaoInformadoException();
+		}
 	}
 
 	@Desafio("buscarNomeJogador")
 	public String buscarNomeJogador(Long idJogador) {
-		throw new UnsupportedOperationException();
+		String nome="";
+		for (CadastroJogador player : listarJogadores){
+			if(player.getId()==idJogador){
+				nome = player.getNome();
+			}
+		}
+		if(nome.isEmpty() || nome == null){
+			throw new br.com.codenation.desafio.exceptions.JogadorNaoEncontradoException();
+		}
+		else{
+			return nome;
+		}
 	}
 
 	@Desafio("buscarNomeTime")
 	public String buscarNomeTime(Long idTime) {
-		throw new UnsupportedOperationException();
+		String nome = "";
+		for(CadastroTime squad: listarEquipes){
+			if(squad.getId()==idTime){
+				nome = squad.getNome();
+			}
+		}
+		if(nome.isEmpty() || nome == null){
+			throw new br.com.codenation.desafio.exceptions.TimeNaoEncontradoException();
+		}
+		else{
+			return nome;
+		}
+
 	}
 
 	@Desafio("buscarJogadoresDoTime")
@@ -121,6 +186,12 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 			if (player.getId() == id) return true;
 		}
 		return  false;
+	}
+
+	private List<CadastroJogador> findPLayer(Long idTime){
+		return listarJogadores.stream()
+				.filter(player -> player.getIdTime()==idTime)
+				.collect(toList());
 	}
 
 }

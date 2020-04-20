@@ -11,6 +11,7 @@ public class CadastroJogador {
     private LocalDate dataNascimento;
     private Integer nivelHabilidade;
     private BigDecimal salario;
+    private boolean capitao;
 
     public CadastroJogador(long id,
                            long idTime,
@@ -24,6 +25,7 @@ public class CadastroJogador {
         this.dataNascimento = dataNascimento;
         this.nivelHabilidade = nivelHabilidade;
         this.salario = salario;
+        this.capitao = false;
     }
 
     public long getId() {
@@ -72,5 +74,13 @@ public class CadastroJogador {
 
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
+    }
+
+    public boolean isCapitao() {
+        return capitao;
+    }
+
+    public void setCapitao(boolean capitao) {
+        this.capitao = capitao;
     }
 }
