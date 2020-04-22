@@ -83,4 +83,9 @@ public class CadastroJogador {
     public void setCapitao(boolean capitao) {
         this.capitao = capitao;
     }
+
+    public Long getIdade(){
+        Long idade;
+        return idade = Long.valueOf(getDataNascimento().getYear() - LocalDate.now().getYear());
+    }
 }

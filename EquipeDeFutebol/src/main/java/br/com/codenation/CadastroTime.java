@@ -6,18 +6,18 @@ public class CadastroTime {
 
     private long id;
     private String nome;
-    private LocalDate dataCriaçao;
+    private LocalDate dataCriacao;
     private String corUniformePrincipal;
     private String corUniformeSecundario;
 
     public CadastroTime(long id,
                         String nome,
-                        LocalDate dataCriaçao,
+                        LocalDate dataCriacao,
                         String corUniformePrincipal,
                         String corUniformeSecundario) {
         this.id = id;
         this.nome = nome;
-        this.dataCriaçao = dataCriaçao;
+        this.dataCriacao = dataCriacao;
         this.corUniformePrincipal = corUniformePrincipal;
         this.corUniformeSecundario = corUniformeSecundario;
     }
@@ -39,11 +39,11 @@ public class CadastroTime {
     }
 
     public LocalDate getDate(){
-        return dataCriaçao;
+        return dataCriacao;
     }
 
-    public void setDate(LocalDate dataCriaçao){
-        this.dataCriaçao = dataCriaçao;
+    public void setDate(LocalDate dataCriacao){
+        this.dataCriacao = dataCriacao;
     }
 
     public String getCorUniformePrincipal(){
