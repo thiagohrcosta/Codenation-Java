@@ -3,6 +3,7 @@ package br.com.codenation;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -131,17 +132,40 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 		else{
 			return nome;
 		}
-
 	}
 
 	@Desafio("buscarJogadoresDoTime")
 	public List<Long> buscarJogadoresDoTime(Long idTime) {
-		throw new UnsupportedOperationException();
+		List<CadastroJogador> jogadores;
+		List<Long> ids = new ArrayList<>();
+
+		if(!existeEquipe(idTime)){
+			throw new br.com.codenation.desafio.exceptions.TimeNaoEncontradoException();
+		}
+		else {
+			jogadores = findPLayer(idTime);
+			for(CadastroJogador player: jogadores) {
+				ids.add(player.getId());
+			}
+			return ids;
+		}
 	}
 
 	@Desafio("buscarMelhorJogadorDoTime")
 	public Long buscarMelhorJogadorDoTime(Long idTime) {
-		throw new UnsupportedOperationException();
+	    List<CadastroJogador> jogadores;
+	    Long bestPlayer;
+
+	    if(!existeEquipe(idTime)) {
+	        throw new br.com.codenation.desafio.exceptions.TimeNaoEncontradoException();
+        }
+	    else {
+	        jogadores = findPLayer(idTime);
+	        bestPlayer = jogadores
+                    .stream()
+                    .max(Comparator.comparing(CadastroJogador::getNivelHabilidade)).get().getId();
+        }
+        return bestPlayer;
 	}
 
 	@Desafio("buscarJogadorMaisVelho")
