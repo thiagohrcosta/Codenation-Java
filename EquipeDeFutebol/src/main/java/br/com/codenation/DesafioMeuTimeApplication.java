@@ -17,7 +17,7 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 	private CadastroTime equipe;
 	private CadastroJogador jogador;
 
-	private List<CadastroTime> listarEquipes = new ArrayList<CadastroTime>();
+	private List<CadastroTime> listarEquipes = new ArrayList<>();
 	private List<CadastroJogador>listarJogadores = new ArrayList<>();
 
 
@@ -186,7 +186,12 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("buscarTimes")
 	public List<Long> buscarTimes() {
-		throw new UnsupportedOperationException();
+		List<Long> buscarEquipeId = new ArrayList<>();
+
+		for (CadastroTime findTeam: listarEquipes){
+			buscarEquipeId.add(findTeam.getId());
+		}
+		return  buscarEquipeId;
 	}
 
 	@Desafio("buscarJogadorMaiorSalario")
@@ -201,7 +206,22 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("buscarTopJogadores")
 	public List<Long> buscarTopJogadores(Integer top) {
-		throw new UnsupportedOperationException();
+		List<CadastroJogador> topPlayers;
+		List<CadastroJogador> topBest;
+		List<Long> idTopPlayers = new ArrayList<>();
+
+		if (top<1){
+			throw new UnsupportedOperationException();
+		}
+		else{
+			topPlayers = listarJogadores.stream().sorted(Comparator.comparingInt(CadastroJogador::getNivelHabilidade)).collect(toList());
+			topBest = topPlayers.subList(0,top);
+
+			for (CadastroJogador findTopPlayers: topBest){
+				idTopPlayers.add(findTopPlayers.getId());
+			}
+			return idTopPlayers;
+		}
 	}
 
 	@Desafio("buscarCorCamisaTimeDeFora")

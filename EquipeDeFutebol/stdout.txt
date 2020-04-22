@@ -1,6 +1,4 @@
-Downloading https://services.gradle.org/distributions/gradle-4.5.1-bin.zip
-.....................................................................
-Starting a Gradle Daemon (subsequent builds will be faster)
+Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
 :compileJava
 :processResources NO-SOURCE
 :classes
@@ -8,5 +6,5 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 Quantidade de desafios esperados: 14. Encontrados: 14.
 Desafio pronto para ser enviado. Nenhum erro encontrado.
 
-BUILD SUCCESSFUL in 2m 49s
+BUILD SUCCESSFUL in 59s
 2 actionable tasks: 2 executed
