@@ -34,12 +34,15 @@ public class StatisticUtil {
 
 	public static int median(int[] elements) {
 		Arrays.sort(elements);
-		int mediana = elements.length / 2;
+		int tamanhoArray = elements.length;
+		int mediana;
+		int divisao = tamanhoArray / 2;
 
 		if (elements.length % 2 == 0) {
-			return (elements[mediana] + elements[mediana + 1]) / 2;
+			return (elements[divisao] + elements[divisao - 1]) / 2;
 		} else {
-			return elements[mediana];
+			mediana = elements[divisao];
 		}
+		return mediana;
 	}
 }
