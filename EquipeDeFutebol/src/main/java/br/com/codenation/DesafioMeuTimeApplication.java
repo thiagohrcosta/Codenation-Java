@@ -4,11 +4,14 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import br.com.codenation.desafio.annotation.Desafio;
 import br.com.codenation.desafio.app.MeuTimeInterface;
+import br.com.codenation.desafio.exceptions.JogadorNaoEncontradoException;
+import br.com.codenation.desafio.exceptions.TimeNaoEncontradoException;
 
 import static java.util.stream.Collectors.toList;
 
@@ -186,7 +189,7 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("buscarTimes")
 	public List<Long> buscarTimes() {
-		List<Long> buscarEquipeId = new ArrayList<>();
+		List<Long> buscarEquipeId = new LinkedList<>();
 
 		for (CadastroTime findTeam: listarEquipes){
 			buscarEquipeId.add(findTeam.getId());
@@ -196,25 +199,39 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("buscarJogadorMaiorSalario")
 	public Long buscarJogadorMaiorSalario(Long idTime) {
-		throw new UnsupportedOperationException();
-	}
+        throw new UnsupportedOperationException();
+    }
+
 
 	@Desafio("buscarSalarioDoJogador")
-	public BigDecimal buscarSalarioDoJogador(Long idJogador) {
-		throw new UnsupportedOperationException();
+	public BigDecimal buscarSalarioDoJogador(Long idJogador){
+	    BigDecimal salario;
+	    CadastroJogador playerSalary;
+
+	    if(!existeJogador(idJogador)) {
+            throw new JogadorNaoEncontradoException();
+        }
+	    else{
+	        playerSalary = findOnePlayer(idJogador);
+	        salario = playerSalary.getSalario();
+	        return salario;
+
+	    }
 	}
 
 	@Desafio("buscarTopJogadores")
 	public List<Long> buscarTopJogadores(Integer top) {
 		List<CadastroJogador> topPlayers;
 		List<CadastroJogador> topBest;
-		List<Long> idTopPlayers = new ArrayList<>();
+		List<Long> idTopPlayers = new LinkedList<>();
 
 		if (top<1){
 			throw new UnsupportedOperationException();
 		}
 		else{
-			topPlayers = listarJogadores.stream().sorted(Comparator.comparingInt(CadastroJogador::getNivelHabilidade)).collect(toList());
+			topPlayers = listarJogadores
+                    .stream()
+                    .sorted(Comparator.comparingInt(CadastroJogador::getNivelHabilidade)).collect(toList());
 			topBest = topPlayers.subList(0,top);
 
 			for (CadastroJogador findTopPlayers: topBest){
@@ -226,27 +243,59 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
 
 	@Desafio("buscarCorCamisaTimeDeFora")
 	public String buscarCorCamisaTimeDeFora(Long timeDaCasa, Long timeDeFora) {
-		throw new UnsupportedOperationException();
+
+		if(!existeEquipe(timeDaCasa) || !existeEquipe(timeDeFora)) throw new TimeNaoEncontradoException();
+
+		String corPrimariaCasa = findTeam(timeDaCasa).getCorUniformePrincipal();
+		String corPrimariaFora = findTeam(timeDeFora).getCorUniformePrincipal();
+		String corSecundariaFora = findTeam(timeDeFora).getCorUniformeSecundario();
+
+		if(corPrimariaCasa.equalsIgnoreCase(corPrimariaFora)){
+		    return corSecundariaFora;
+        }
+		else if (!corPrimariaCasa.equalsIgnoreCase(corPrimariaFora)){
+		    return  corPrimariaFora;
+        }
+		else {
+		    throw new TimeNaoEncontradoException();
+        }
 	}
 
 	private boolean existeEquipe(long id){
 		for (CadastroTime team: listarEquipes){
 			if (team.getId() == id) return true;
 		}
-		return  false;
+		return false;
 	}
 
-	private boolean existeJogador(long id){
+	private boolean existeJogador(long idPLayer){
 		for (CadastroJogador player: listarJogadores){
-			if (player.getId() == id) return true;
+			if (player.getId() == idPLayer) return true;
 		}
-		return  false;
+		return false;
 	}
+
+	private CadastroJogador findOnePlayer(Long id){
+	    return listarJogadores.stream()
+                .filter(player -> player.getId()==id)
+                .findFirst()
+                .get();
+    }
 
 	private List<CadastroJogador> findPLayer(Long idTime){
-		return listarJogadores.stream()
-				.filter(player -> player.getIdTime()==idTime)
-				.collect(toList());
+			return listarJogadores.stream()
+                    .filter(player -> player.getIdTime()==idTime)
+                    .collect(toList());
 	}
 
+	private CadastroTime findTeam(Long id) {
+        CadastroTime result;
+        return result = listarEquipes.stream()
+                .filter(t -> t.getId()==id)
+                .findFirst()
+                .get();
+    }
 }
+
+
+
