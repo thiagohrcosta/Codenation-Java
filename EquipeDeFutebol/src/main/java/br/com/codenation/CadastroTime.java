@@ -9,57 +9,63 @@ public class CadastroTime {
     private LocalDate dataCriacao;
     private String corUniformePrincipal;
     private String corUniformeSecundario;
+    private CadastroJogador capitao;
 
-    public CadastroTime(long id,
-                        String nome,
-                        LocalDate dataCriacao,
-                        String corUniformePrincipal,
-                        String corUniformeSecundario) {
+    public CadastroTime(long id, String nome, LocalDate dataCriacao, String corUniformePrincipal, String corUniformeSecundario, CadastroJogador capitao) {
         this.id = id;
         this.nome = nome;
         this.dataCriacao = dataCriacao;
         this.corUniformePrincipal = corUniformePrincipal;
         this.corUniformeSecundario = corUniformeSecundario;
+        this.capitao = capitao;
     }
 
-    public long getId(){
+    public long getId() {
         return id;
     }
 
-    public void setId(long id){
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public LocalDate getDate(){
+    public LocalDate getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDate(LocalDate dataCriacao){
+    public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 
-    public String getCorUniformePrincipal(){
+    public String getCorUniformePrincipal() {
         return corUniformePrincipal;
     }
 
-    public void setCorUniformePrincipal(String corUniformePrincipal){
+    public void setCorUniformePrincipal(String corUniformePrincipal) {
         this.corUniformePrincipal = corUniformePrincipal;
     }
 
-    public String getCorUniformeSecundario(){
+    public String getCorUniformeSecundario() {
         return corUniformeSecundario;
     }
 
-    public void setCorUniformeSecundario(String corUniformeSecundario){
+    public void setCorUniformeSecundario(String corUniformeSecundario) {
         this.corUniformeSecundario = corUniformeSecundario;
+    }
+
+    public CadastroJogador getCapitao() {
+        return capitao;
+    }
+
+    public void setCapitao(CadastroJogador capitao) {
+        this.capitao = capitao;
     }
 }
 
