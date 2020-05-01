@@ -9,31 +9,16 @@ import java.math.BigDecimal;
 
 public class CalculadorDeClasses implements Calculavel {
 
-    BigDecimal soma = BigDecimal.ZERO;
-    int value = 0;
-
     @Override
     public BigDecimal somar(Object obj) {
-
-        validadorSoma(obj);
-
-        if (value == 0) {
-            return BigDecimal.ZERO;
-        } else {
-            return soma;
-        }
+        Field [] fields = obj.getClass().getDeclaredFields();
+        return calcularBigDecimal(fields,"somar", obj);
     }
 
     @Override
     public BigDecimal subtrair(Object obj) {
-
-        validadorSubtracao(obj);
-
-        if (value == 0) {
-            return BigDecimal.ZERO;
-        } else {
-            return soma;
-        }
+        Field [] fields = obj.getClass().getDeclaredFields();
+        return calcularBigDecimal(fields, "subtrair", obj);
     }
 
     @Override
@@ -41,32 +26,32 @@ public class CalculadorDeClasses implements Calculavel {
         return somar(obj).subtract(subtrair(obj));
     }
 
-    public void validadorSoma(Object obj) {
-        for (Field atributo : obj.getClass().getDeclaredFields()) {
-            atributo.setAccessible(true);
-            if (atributo.isAnnotationPresent(Somar.class) && atributo.getType().equals(BigDecimal.class)) {
-                try {
-                    soma = soma.add((BigDecimal) atributo.get(obj));
-                    value++;
-                } catch (IllegalAccessException e) {
-                    System.out.print("Erro");
+    public BigDecimal calcularBigDecimal(Field[] fields, String annotation, Object obj){
+        BigDecimal bigDec = BigDecimal.ZERO;
+
+        for (Field field: fields) {
+            field.setAccessible(true);
+            if (annotation.contains("somar")) {
+                if (field.isAnnotationPresent(Somar.class) && field.getType().equals(BigDecimal.class)) {
+                    try {
+                        bigDec = bigDec.add((BigDecimal) field.get(obj));
+                    } catch (IllegalAccessException e) {
+                        System.out.print(e.getMessage());
+                    }
+                }
+            }
+            else{
+                if(field.isAnnotationPresent(Subtrair.class) && field.getType().equals(BigDecimal.class)){
+                    try {
+                        bigDec = bigDec.add((BigDecimal) field.get(obj));
+                    } catch (IllegalAccessException e) {
+                        System.out.print(e.getMessage());
+                    }
                 }
             }
         }
+        return bigDec;
     }
 
-    public void validadorSubtracao(Object obj) {
-        for (Field atributo : obj.getClass().getDeclaredFields()) {
-            atributo.setAccessible(true);
-            if (atributo.isAnnotationPresent(Subtrair.class) && atributo.getType().equals(BigDecimal.class)) {
-                try {
-                    soma = soma.add((BigDecimal) atributo.get(obj));
-                    value++;
-                } catch (IllegalAccessException e) {
-                    System.out.print("Erro");
-                }
-            }
-        }
-    }
 
 }
