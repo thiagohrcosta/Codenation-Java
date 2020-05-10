@@ -1,0 +1,12 @@
+com/challenge/suite/CompanyTest.class
+com/challenge/suite/CandidateTest.class
+com/challenge/suite/TableWithIdTest.class
+com/challenge/suite/TableWithEmbeddedIdTest.class
+com/challenge/suite/ChallengeTest.class
+com/challenge/suite/AccelerationTest.class
+com/challenge/SpringChallengeApplicationTests.class
+com/challenge/suite/UserTest.class
+com/challenge/suite/TableWithIdNameSlugTest.class
+com/challenge/suite/ChallengeTestSuite.class
+com/challenge/suite/SubmissionTest.class
+com/challenge/suite/ClassTest.class

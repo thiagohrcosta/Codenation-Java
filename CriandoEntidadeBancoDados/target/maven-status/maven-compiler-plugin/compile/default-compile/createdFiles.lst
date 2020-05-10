@@ -1,0 +1,9 @@
+com/challenge/SpringChallengeApplication.class
+com/challenge/entity/Company.class
+com/challenge/entity/User.class
+com/challenge/entity/Submission.class
+com/challenge/entity/SubmissionIdentity.class
+com/challenge/entity/Challenge.class
+com/challenge/entity/CandidateIdentity.class
+com/challenge/entity/Candidate.class
+com/challenge/entity/Acceleration.class
