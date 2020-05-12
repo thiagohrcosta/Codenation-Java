@@ -1,16 +1,12 @@
 package br.com.codenation;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class StatisticUtil {
 
 	public static int average(int[] elements) {
-		int soma = 0;
-
-		for (int elementos : elements) {
-			soma += elementos;
-		}
-		return (soma / elements.length);
+		return (int) IntStream.of(elements).average().getAsDouble();
 	}
 
 	public static int mode(int[] elements) {
