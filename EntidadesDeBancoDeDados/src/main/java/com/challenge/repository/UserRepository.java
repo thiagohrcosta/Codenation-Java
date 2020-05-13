@@ -15,8 +15,8 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     List<User>findByAccelerationName(String name);
 
-    @Query("SELECT c.id.user" +
-            "FROM Candidate c" +
+    @Query("SELECT c.id.user " +
+            "FROM Candidate c " +
             "WHERE c.id.company.id = :companyId")
     List<User>findByCompanyId(Long companyId);
 }
