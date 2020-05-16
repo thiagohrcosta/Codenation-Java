@@ -76,3 +76,6 @@ Os desáfios deste módulo foram:
  - Intellij
  - Maven
  - Gradle
+ - Git
+ - Gihbash
+ - Docker
