@@ -70,6 +70,22 @@ Os desáfios deste módulo foram:
 
  - ***Criando e manipulando entidades no Banco de Dados***
  - ***Order Service***
+ 
+ Já o conteúdo do **MÓDULO 06** contemplou o seguinte conteúdo:
+ 
+ - Rest API
+ - Spring Boot
+ - JPA
+ - H2
+ - Dependency Injection
+ - MapStruct
+ - Lombok
+ - SQL
+ 
+Já os seus desafios foram: 
+
+ - **Criando  endpoints com Spring**
+  - **Gerador de frases do monty python utilizando Spring Boot e JPA**
 
 ## O que foi utilizado
 
