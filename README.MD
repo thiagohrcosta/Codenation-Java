@@ -84,8 +84,8 @@ Os desáfios deste módulo foram:
  
 Já os seus desafios foram: 
 
- - **Criando  endpoints com Spring**
-  - **Gerador de frases do monty python utilizando Spring Boot e JPA**
+ - [**Criando  endpoints com Spring**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/EndPointsComSpring)
+  - [**Gerador de frases do monty python utilizando Spring Boot e JPA**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/GeradorDeFrases)
 
 ## O que foi utilizado
 
