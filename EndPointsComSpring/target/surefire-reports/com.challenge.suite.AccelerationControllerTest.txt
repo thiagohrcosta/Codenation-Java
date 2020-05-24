@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.AccelerationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.376 s <<< FAILURE! - in com.challenge.suite.AccelerationControllerTest
+findById(com.challenge.suite.AccelerationControllerTest)  Time elapsed: 0.141 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null!; nested exception is java.lang.IllegalArgumentException: The given id must not be null!
+	at com.challenge.suite.AccelerationControllerTest.findById(AccelerationControllerTest.java:37)
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null!; nested exception is java.lang.IllegalArgumentException: The given id must not be null!
+	at com.challenge.suite.AccelerationControllerTest.findById(AccelerationControllerTest.java:37)
+Caused by: java.lang.IllegalArgumentException: The given id must not be null!
+	at com.challenge.suite.AccelerationControllerTest.findById(AccelerationControllerTest.java:37)
+
