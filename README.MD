@@ -30,9 +30,9 @@ Já no **MÓDULO 02** foram estudados os conteúdos envolvendo:
 
 Para a conclusão do citado módulo foram exigidos os seguintes desafios:
 
- - ***Gerenciador de Times de Futebol***
- - ***Controle de estacionamento***
- - ***Média, moda e mediana***
+ - [***Gerenciador de Times de Futebol***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/EquipeDeFutebol)
+ - [***Controle de estacionamento***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/ControleDeEstacionamento)
+ - [***Média, moda e mediana***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/MediaModaMediana)
 
 Dando prosseguimento à Aceleração, o **MÓDULO 03** teve como conteúdo lecionado:
 
@@ -42,7 +42,7 @@ Dando prosseguimento à Aceleração, o **MÓDULO 03** teve como conteúdo lecio
  
  Seguindo a formação orientada a projetos, o citado módulo contou com o seguinte desafio:
  
- - ***Utilitário - Calculador de atributos de classe***
+ - [***Utilitário - Calculador de atributos de classe***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/CalculadorDeClasses)
 
 O **MÓDULO 04** abordou o seguinte conteúdo:
 
@@ -53,7 +53,7 @@ O **MÓDULO 04** abordou o seguinte conteúdo:
 
 Seu desafio foi:
 
- - ***Criando entidades de Banco de Dados em Java***
+ - [***Criando entidades de Banco de Dados em Java***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/CriandoEntidadeBancoDados)
 
 Após o estudo inicial do Spring Boot, o **MÓDULO 05** foi dedicado ao seguinte conteúdo:
 
@@ -95,3 +95,5 @@ Já os seus desafios foram:
  - Git
  - Gihbash
  - Docker
+ - Lombok
+ - Hibernate
