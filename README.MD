@@ -68,8 +68,8 @@ Após o estudo inicial do Spring Boot, o **MÓDULO 05** foi dedicado ao seguinte
 
 Os desáfios deste módulo foram:
 
- - ***Criando e manipulando entidades no Banco de Dados***
- - ***Order Service***
+ - [***Criando e manipulando entidades no Banco de Dados***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/EntidadesDeBancoDeDados)
+ - [***Order Service***](https://github.com/thiagohrcosta/Codenation-Java/tree/master/OrderService)
  
  Já o conteúdo do **MÓDULO 06** contemplou o seguinte conteúdo:
  
