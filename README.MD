@@ -87,6 +87,20 @@ Já os seus desafios foram:
  - [**Criando  endpoints com Spring**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/EndPointsComSpring)
   - [**Gerador de frases do monty python utilizando Spring Boot e JPA**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/GeradorDeFrases)
 
+Dando prosseguimento o **MÓDULO 07** abraçou os seguintes conteúdos:
+
+- REST API
+- Spring Boot
+- Spring Security
+- OAuth2
+- JPA
+- H2
+- SQL
+
+o desafio deste módulo foi:
+
+- **OAUTH2 com Spring**
+
 ## O que foi utilizado
 
  - Intellij
