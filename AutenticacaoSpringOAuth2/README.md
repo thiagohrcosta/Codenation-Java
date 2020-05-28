@@ -14,11 +14,11 @@ Como estrutura base no desenvolvimento deste projeto, adotou-se três pacotes `m
 
 Na criação do `Usuario.java` utilizou-se algumas *annotations* tais como @Id e @eneratedValue no atributo Id, ficando:
 
->@Id
->@GeneratedValue
->private Long Id;
->
-> private String login;
-> private String senha
+>@Id <br>
+>@GeneratedValue<br>
+>private Long Id;<br>
+><br>
+> private String login;<br>
+> private String senha<br>
 
 No momento não utilizou-se o **Lombok** que será posteriormente adotado para aprimorar o presente trabalho, o que exige a criação do *construtor* e dos *getters* e *setters*.
