@@ -1,5 +1,5 @@
 # Autenticação com Spring e OAuth2
-Este projeto foi desenvolvido durante o **ACELERA DEV - JAVA** desenvolvido pela **[CODENATION*](https://www.codenation.dev/)*, integrando uma das disciplinas do **sétimo módulo** do curso. Como fonte de estudo adotou-se também o material fornecido pelo [AcademiaDev](https://academiadev.gitbook.io/joinville/seguranca/oauth2).
+Este projeto foi desenvolvido durante o **ACELERA DEV - JAVA** promovido pela **[CODENATION*](https://www.codenation.dev/)*, integrando uma das disciplinas do **sétimo módulo** do curso. Como fonte de estudo adotou-se também o material fornecido pelo [AcademiaDev](https://academiadev.gitbook.io/joinville/seguranca/oauth2).
 
 ## Criação do projeto
 Foi utilizado o [Spring Initializr](https://start.spring.io/) para a criação do projeto inicial com as seguintes configurações:
@@ -35,3 +35,8 @@ Foi adicionado ao `build.gradle` a seguinte linha de comando:
 
 Trata-se de uma ferramenta de segurança que já integra do Spring e uma vez adicionada, acarretará o seguinte resultado diante de uma requisição **GET** (utilizou-se o *Insomnia* para a requisição):
 ![enter image description here](https://github.com/thiagohrcosta/Codenation-Java/blob/master/AutenticacaoSpringOAuth2/img/img05.png?raw=true)
+
+O retorno como *Status: 401* significa dizer que a tentativa de requisição não obteve sucesso diante da falta de autorização, vejamos:
+
+>"*O código de resposta de status de erro do cliente HTTP **`401 Unauthorized`** indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino*". 
+Fonte: [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401#:~:text=O%20c%C3%B3digo%20de%20resposta%20de,para%20o%20recurso%20de%20destino.)
