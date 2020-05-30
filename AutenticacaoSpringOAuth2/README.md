@@ -40,3 +40,17 @@ O retorno como *Status: 401* significa dizer que a tentativa de requisição nã
 
 >"*O código de resposta de status de erro do cliente HTTP **`401 Unauthorized`** indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino*". 
 Fonte: [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401#:~:text=O%20c%C3%B3digo%20de%20resposta%20de,para%20o%20recurso%20de%20destino.)
+
+Contudo conforme exposto pelo ![ACADEMIADEV](https://academiadev.gitbook.io/joinville/seguranca/oauth2) esta não é a melhor solução, sendo necessário adicionar mais uma dependência ao projeto, qual seja:
+
+>compile('org.springframework.security.oauth:spring-security-oauth2:2.3.4.RELEASE')
+
+Que será responsável para criar o gerenciador de *tokens* para a segurança da aplicação. 
+
+## Configuração do servidor de autenticação
+
+O projeto contará com um servidor próprio de autenticação, sendo então criando um pacote denominado `config` com uma classe `AuthorizationServerConfig.java`. Na referida classe seguindo o projeto apresentado
+pelo **ACADEMIADEV** e utilizado como fonte de estudo do **ACELERA DEV - JAVA**, será inserido no projeto uma *annotation*, neste caso `@Configuration`, garantindo a classe possa ser utilizada em toda a aplicação, 
+sendo também adicionada a anotação `@EnableAuthorizationServer`, que garantirá o gerenciamento de autenticação. Por fim, será extendida a classe `AuthorizationServerConfigurerAdapter`, utilizada para a configuração
+do servidor de autenticação. 
+
