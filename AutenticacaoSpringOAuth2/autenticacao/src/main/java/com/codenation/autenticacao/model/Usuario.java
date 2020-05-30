@@ -18,12 +18,6 @@ public class Usuario {
     private String Login;
     private String senha;
 
-    public Usuario(Long id, String login, String senha) {
-        this.id = id;
-        Login = login;
-        this.senha = senha;
-    }
-
     public Long getId() {
         return id;
     }
