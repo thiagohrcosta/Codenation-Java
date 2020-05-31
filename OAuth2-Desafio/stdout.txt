@@ -1,0 +1,146 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.challenge:spring-http >----------------------
+[INFO] Building spring-oauth2 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-http ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ spring-http ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 40 source files to /home/thiago/codenation/java-12/target/classes
+[INFO] /home/thiago/codenation/java-12/src/main/java/com/challenge/security/SecurityConfiguration.java: /home/thiago/codenation/java-12/src/main/java/com/challenge/security/SecurityConfiguration.java uses or overrides a deprecated API.
+[INFO] /home/thiago/codenation/java-12/src/main/java/com/challenge/security/SecurityConfiguration.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ spring-http ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ spring-http ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/thiago/codenation/java-12/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ spring-http ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.challenge.suite.ChallengeTestSuite
+20:44:52.156 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.challenge.suite.Oauth2Test]
+20:44:52.167 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:44:52.184 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:44:52.225 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.challenge.suite.Oauth2Test] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:44:52.302 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.challenge.suite.Oauth2Test], using SpringBootContextLoader
+20:44:52.316 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.challenge.suite.Oauth2Test]: class path resource [com/challenge/suite/Oauth2Test-context.xml] does not exist
+20:44:52.317 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.challenge.suite.Oauth2Test]: class path resource [com/challenge/suite/Oauth2TestContext.groovy] does not exist
+20:44:52.317 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.challenge.suite.Oauth2Test]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:44:52.597 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.challenge.suite.Oauth2Test]
+20:44:53.209 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.challenge.suite.Oauth2Test]: using defaults.
+20:44:53.210 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+20:44:53.413 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6e171cd7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@402bba4f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@795cd85e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59fd97a8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f5ac9e4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@123ef382, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@dbf57b3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@384ad17b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@61862a7f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@441772e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d9b7cce, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d9e68d0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@42e99e4a]
+20:44:53.455 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.challenge.suite.Oauth2Test]
+20:44:53.456 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.challenge.suite.Oauth2Test]
+20:44:53.459 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.challenge.suite.Oauth2Test]
+20:44:53.459 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.challenge.suite.Oauth2Test]
+20:44:53.461 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.challenge.suite.Oauth2Test]
+20:44:53.461 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.challenge.suite.Oauth2Test]
+20:44:53.462 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.challenge.suite.Oauth2Test]
+20:44:53.463 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.challenge.suite.Oauth2Test]
+20:44:53.470 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4fb0f2b9 testClass = Oauth2Test, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@79924b testClass = Oauth2Test, locations = '{}', classes = '{class com.challenge.SpringOauth2Application, class com.challenge.SpringOauth2Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@69b0fd6f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@66d1af89, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1fc2b765, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1786f9d5, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@eb21112], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+20:44:53.471 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.challenge.suite.Oauth2Test]
+20:44:53.471 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.challenge.suite.Oauth2Test]
+20:44:53.634 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2020-05-30 20:44:56.738  INFO 17746 --- [           main] com.challenge.suite.Oauth2Test           : Starting Oauth2Test on H14BU08 with PID 17746 (started by thiago in /home/thiago/codenation/java-12)
+2020-05-30 20:44:56.741  INFO 17746 --- [           main] com.challenge.suite.Oauth2Test           : No active profile set, falling back to default profiles: default
+2020-05-30 20:45:14.650  INFO 17746 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-30 20:45:21.197  INFO 17746 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6139ms. Found 6 repository interfaces.
+2020-05-30 20:45:32.259  INFO 17746 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$52db545b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-30 20:45:38.089  INFO 17746 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-30 20:45:43.088  INFO 17746 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-30 20:45:47.403  INFO 17746 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-30 20:45:49.556  INFO 17746 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-30 20:45:49.592  INFO 17746 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-30 20:45:57.542  INFO 17746 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-30 20:46:02.998  INFO 17746 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table acceleration if exists
+Hibernate: drop table candidate if exists
+Hibernate: drop table challenge if exists
+Hibernate: drop table company if exists
+Hibernate: drop table submission if exists
+Hibernate: drop table users if exists
+Hibernate: create table acceleration (id bigint generated by default as identity, created_at timestamp, name varchar(100) not null, slug varchar(50) not null, challenge_id bigint, primary key (id))
+Hibernate: create table candidate (created_at timestamp, status integer not null, user_id bigint not null, company_id bigint not null, acceleration_id bigint not null, primary key (acceleration_id, company_id, user_id))
+Hibernate: create table challenge (id bigint generated by default as identity, created_at timestamp, name varchar(100) not null, slug varchar(50) not null, primary key (id))
+Hibernate: create table company (id bigint generated by default as identity, created_at timestamp, name varchar(100) not null, slug varchar(50) not null, primary key (id))
+Hibernate: create table submission (created_at timestamp, score float not null, user_id bigint not null, challenge_id bigint not null, primary key (challenge_id, user_id))
+Hibernate: create table users (id bigint generated by default as identity, created_at timestamp, email varchar(100) not null, full_name varchar(100) not null, nickname varchar(50) not null, password varchar(255) not null, primary key (id))
+Hibernate: alter table acceleration add constraint FK6bucejmky2hqhcmj6vexf9tkp foreign key (challenge_id) references challenge
+Hibernate: alter table candidate add constraint FKc23nbdgfce6rnt56ofltvxu71 foreign key (user_id) references users
+Hibernate: alter table candidate add constraint FK5859evebv1forwxno1dj2x73m foreign key (company_id) references company
+Hibernate: alter table candidate add constraint FK9wdl31wkstau7n5wckm5prkdg foreign key (acceleration_id) references acceleration
+Hibernate: alter table submission add constraint FKioe5xddu66v3aktrkyxj4vfx9 foreign key (user_id) references users
+Hibernate: alter table submission add constraint FK5w6mihcq53t1j5x2cmgy640cm foreign key (challenge_id) references challenge
+2020-05-30 20:46:33.197  INFO 17746 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@184de357'
+2020-05-30 20:46:33.241  INFO 17746 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 20:46:46.954  INFO 17746 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-30 20:47:01.414  INFO 17746 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/user', GET], []
+2020-05-30 20:47:02.129  INFO 17746 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50c2ef56, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d80e1b3, org.springframework.security.web.header.HeaderWriterFilter@128a188a, org.springframework.security.web.authentication.logout.LogoutFilter@639948a2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@595184d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3458dab6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44d84313, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@560d6d2, org.springframework.security.web.session.SessionManagementFilter@72b1df49, org.springframework.security.web.access.ExceptionTranslationFilter@dd9de63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@621a387f]
+2020-05-30 20:47:02.162  INFO 17746 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@28db2afb, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c703860, org.springframework.security.web.context.SecurityContextPersistenceFilter@71df5f30, org.springframework.security.web.header.HeaderWriterFilter@5ebe903a, org.springframework.security.web.authentication.logout.LogoutFilter@58b03029, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@21eedcde, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4895e8f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62808e9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6315bb4, org.springframework.security.web.session.SessionManagementFilter@7c88d04f, org.springframework.security.web.access.ExceptionTranslationFilter@2e62e227, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47f0e078]
+2020-05-30 20:47:02.211  INFO 17746 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71469e01, org.springframework.security.web.context.SecurityContextPersistenceFilter@2db3675a, org.springframework.security.web.header.HeaderWriterFilter@5f9ebd5a, org.springframework.security.web.csrf.CsrfFilter@e18d2a2, org.springframework.security.web.authentication.logout.LogoutFilter@64508788, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fd92289, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@52efb338, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@41bbb219, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1987807b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306c9b2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ab28416, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f2ae973, org.springframework.security.web.session.SessionManagementFilter@175bf9c9, org.springframework.security.web.access.ExceptionTranslationFilter@52d9f36b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71f8ce0e]
+2020-05-30 20:47:06.833  INFO 17746 --- [           main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = codenation
+security.oauth2.client.client-secret = ****
+
+
+2020-05-30 20:47:10.547  INFO 17746 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 20:47:11.101  WARN 17746 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 20:47:15.901  INFO 17746 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-30 20:47:17.820  INFO 17746 --- [           main] com.challenge.suite.Oauth2Test           : Started Oauth2Test in 143.74 seconds (JVM running for 147.676)
+2020-05-30 20:47:21.329  INFO 17746 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-30 20:47:21.330  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-30 20:47:21.414  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 84 ms
+2020-05-30 20:47:24.447  INFO 17746 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-30 20:47:24.447  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-30 20:47:24.455  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-05-30 20:47:24.671  INFO 17746 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-30 20:47:24.671  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-30 20:47:24.679  INFO 17746 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+Hibernate: select user0_.id as id1_5_, user0_.created_at as created_2_5_, user0_.email as email3_5_, user0_.full_name as full_nam4_5_, user0_.nickname as nickname5_5_, user0_.password as password6_5_ from users user0_ where user0_.email=?
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 155.718 s - in com.challenge.suite.ChallengeTestSuite
+2020-05-30 20:47:27.527  INFO 17746 --- [       Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 20:47:27.537  INFO 17746 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 20:47:27.538  INFO 17746 --- [       Thread-2] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table acceleration if exists
+Hibernate: drop table candidate if exists
+Hibernate: drop table challenge if exists
+Hibernate: drop table company if exists
+Hibernate: drop table submission if exists
+Hibernate: drop table users if exists
+2020-05-30 20:47:27.555  INFO 17746 --- [       Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-30 20:47:27.565  INFO 17746 --- [       Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:02 min
+[INFO] Finished at: 2020-05-30T20:47:28-03:00
+[INFO] ------------------------------------------------------------------------
