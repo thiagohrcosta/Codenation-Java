@@ -99,7 +99,7 @@ Dando prosseguimento o **MÓDULO 07** abraçou os seguintes conteúdos:
 
 o desafio deste módulo foi:
 
-- **OAUTH2 com Spring**
+- [**OAUTH2 com Spring**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/OAuth2-Desafio)
 
 ## O que foi utilizado
 
