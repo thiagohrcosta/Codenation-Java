@@ -101,6 +101,26 @@ o desafio deste módulo foi:
 
 - [**OAUTH2 com Spring**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/OAuth2-Desafio)
 
+Já no **MÓDULO 08** foram ensinados os seguintes conteúdos:
+
+- SOLID
+- Strategy Pattern
+- Enumerations
+
+Aplicando-se o desafio:
+
+- [**Refatorando formas de pagamento**](https://github.com/thiagohrcosta/Codenation-Java/tree/master/RefatorandoFormaDePagamento)
+
+Por fim, o **MÓDULO 09** foi responsavel por abranger os conteúdos envolvendo:
+
+- Deploy Applications
+- DevOps 
+- CI/CD
+- Heroku
+- Apache Maven
+
+Não foram exigidos desafios para este módulo.
+
 ## O que foi utilizado
 
  - Intellij
