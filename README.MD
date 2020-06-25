@@ -1,5 +1,5 @@
 # Acelera Dev - Java
-![enter image description here](https://www.codenation.dev/img/social-meta-home.png)
+![LogoCodenation](https://www.codenation.dev/img/social-meta-home.png)
 
 O **Acelera Dev - Java** é um bootcamp voltado para a aceleração rápida do aluno focada na elaboração de projetos semanais, cujos requisitos são incrementados a cada semana aplicando não apenas o que estudado no módulo anterior, como também, as novas funcionalidades do módulo. O curso ministrado pela **[Codenation](https://codenation.dev/)**.
 
@@ -131,3 +131,6 @@ Não foram exigidos desafios para este módulo.
  - Docker
  - Lombok
  - Hibernate
+
+ ## CERTIFICADO
+ ![Certificado](https://github.com/thiagohrcosta/Codenation-Java/blob/master/arquivos/CertificadoCodenation.png?raw=true)
